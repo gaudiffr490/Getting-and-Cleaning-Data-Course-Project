@@ -19,7 +19,7 @@ You should create one R script called run_analysis.R that does the following.
 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-##Download and Unzip the Data
+## Download and Unzip the Data
 path <- "p:/Coursera/getting and cleaning data/UCI HAR Dataset"
 
 if (!file.exists(path)){
@@ -63,7 +63,7 @@ colnames(dataTrain) <- features
 dataAll <- rbind(dataTrain, dataTest)
 
 
-## Retain on standard deviation and mean values
+## Retain only standard deviation and mean values
 std_mean <- dataAll[, grep("std()|mean()|subject|activity", features, ignore.case = TRUE)]
 
 ## Uses descriptive activity names to name the activities in the data set
